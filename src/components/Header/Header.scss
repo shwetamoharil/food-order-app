@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 0px 100px;
+    background-color: bisque;
+
+    &__logo {
+        img {
+            width: 150px;
+        }
+    }
+
+    &__location {
+        flex: 1;
+        display: flex;
+        span {
+            font-weight: 500;
+            padding: 0px 5px
+        }
+    }
+
+    &__items {
+        li{
+            list-style-type: none;
+            padding: 0px 10px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    }
+}
