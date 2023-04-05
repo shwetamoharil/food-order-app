@@ -1,7 +1,6 @@
 import "./Body.scss";
 import Card from "../Card/Card";
 import ShimmerUI from "../ShimmerUI/ShimmerUI";
-import restraurantList from "../../utils/mockData";
 import { useEffect, useState } from "react";
 
 const Body = () => {
@@ -14,13 +13,17 @@ const Body = () => {
   }, []);
 
   const getData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.57034453268314&lng=73.78194741904736&page_type=DESKTOP_WEB_LISTING"
-    );
-    const res = await data.json();
-    console.log(res);
-    setAllRestraurants(res?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestraurants(res?.data?.cards[2]?.data?.data?.cards);
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.57034453268314&lng=73.78194741904736&page_type=DESKTOP_WEB_LISTING"
+      );
+      const res = await data.json();
+      console.log(res);
+      setAllRestraurants(res?.data?.cards[2]?.data?.data?.cards);
+      setFilteredRestraurants(res?.data?.cards[2]?.data?.data?.cards);
+    } catch (e) {
+      throw new Error("Could not fetch data");
+    }
   };
 
   return allRestraurants.length === 0 ? (
