@@ -1,0 +1,36 @@
+.shimmer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__section-1 {
+        min-height: calc(100vh - 600px);
+        background-color: rgb(1, 1, 30);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: white;
+            font-size: 30px;
+            font-weight: 300;
+            align-self: center;
+        }
+    }
+
+    &__section-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 2rem;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 0.5rem;
+        }
+    }
+}

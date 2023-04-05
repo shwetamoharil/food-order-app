@@ -1,25 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header/Header";
-import Card from "./components/Card/Card";
-import { restraurantList } from "./constants";
+import Body from "./components/Body/Body";
 import "./App.scss";
 
 const AppLayout = () => {
   return (
-    <div className="body">
+    <div>
       <Header />
-      <div className="restraurant-container">
-        {restraurantList.map((res) => (
-          <Card
-            name={res.name}
-            cloudinaryImageId={res.cloudinaryImageId}
-            costForTwo={res.costForTwo}
-            cuisines={res.cuisines}
-            rating={res.rating}
-          ></Card>
-        ))}
-      </div>
+      <Body />
     </div>
   );
 };

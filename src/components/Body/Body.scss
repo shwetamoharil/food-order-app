@@ -1,0 +1,38 @@
+.body {
+  position: relative;
+  top: 0px;
+  min-height: calc(100vh - 368px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .restraurant-container {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    border-top: 1px solid black;
+    padding-top: 20px;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    position: relative;
+    padding: 10px;
+
+    button,
+    input {
+      padding: 10px;
+    }
+
+  }
+}
