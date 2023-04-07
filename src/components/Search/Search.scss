@@ -1,0 +1,129 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 100vh;
+    padding-top: 60px;
+
+    &__search {
+        width: 900px;
+        display: flex;
+        align-items: center;
+        border: 1px solid darkgray;
+        padding: 0 13px;
+
+        &__input-box {
+            flex: 1;
+
+            input[type=text]:focus {
+                outline: none;
+            }
+
+            input {
+                width: 100%;
+                height: 48px;
+                border: none;
+                background-color: whitesmoke;
+            }
+
+            ::placeholder {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.2;
+
+            }
+        }
+
+        &__icon {
+            display: flex;
+        }
+    }
+
+    &__recent-search {
+        width: 900px;
+        margin-top: 2rem;
+
+        &__recent {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                font-size: 1.15rem;
+                letter-spacing: -.3px;
+                color: #282c3f;
+                font-weight: 700;
+
+                font-family: "ProximaNovaBold";
+            }
+
+            &__searches {
+                display: flex;
+                align-items: center;
+                margin-top: 0.5rem;
+
+                button {
+                    width: 100%;
+                    color: #686b78;
+                    text-transform: capitalize;
+                    letter-spacing: -.15px;
+                    background-color: #0000;
+                    border: none;
+                    outline: none;
+                    margin-left: 16px;
+                    padding: 17px 0;
+                    font-size: 1.15rem;
+                    font-weight: 300;
+                    overflow: hidden;
+                    text-align: start;
+
+
+                }
+            }
+        }
+    }
+
+    &__popular-cuisines {
+        width: 900px;
+
+        &__container {
+            width: 100%;
+
+            &__carousel {
+                display: flex;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                -ms-scroll-snap-type: x mandatory;
+                scroll-snap-type: x mandatory;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                width: 100%;
+
+                &__images {
+                    display: flex;
+                    width: calc(((((25vw - 0px) - 0px) - 16px) - 40px) * 0.235294);
+                    height: calc(1.42105 * (((((25vw - 0px) - 0px) - 16px) - 40px) * 0.235294));
+                    min-width: calc(((((25vw - 0px) - 0px) - 16px) - 40px) * 0.235294);
+                    min-height: calc(1.42105 * (((((25vw - 0px) - 0px) - 16px) - 40px) * 0.235294));
+
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+
+                    button {
+                        width: 100%;
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &__carousel::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+    }
+}
