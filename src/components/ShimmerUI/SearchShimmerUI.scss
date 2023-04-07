@@ -1,0 +1,62 @@
+.search-shimmer-ui {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+
+    &__container {
+        width: 900px;
+        display: flex;
+        margin-top: 2rem;
+        flex-direction: column;
+
+        &__input-box {
+            width: 860px;
+            display: flex;
+            align-items: center;
+            padding: 5px 13px;
+            border: 1px solid black;
+            margin-bottom: 2rem;
+
+            input {
+                width: 100%;
+                flex: 1;
+                height: 48px;
+                border: none;
+                background-color: whitesmoke;
+            }
+        }
+
+        &__search-boxes {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &__search-box-1 {
+                width: 60%;
+                height: 15px;
+                background-color: rgb(189, 186, 186);
+                margin-bottom: 2rem;
+            }
+
+            &__search-box-list {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                &__single-search {
+                    display: flex;
+                    margin-bottom: 1rem;
+
+                    &__item {
+                        width: 60%;
+                        height: 15px;
+                        background-color: rgb(189, 186, 186);
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
