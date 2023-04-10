@@ -5,7 +5,7 @@ import Body from "./components/Body/Body";
 import Search from "./components/Search/Search";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./App.scss";
-import SearchShimmerUI from "./components/ShimmerUI/SearchShimmerUI";
+import AboutClass from "./components/About/AboutClass";
 
 const AppLayout = () => {
   return (
@@ -23,11 +23,15 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/search",
-        element: <SearchShimmerUI />,
+        element: <Search />,
       },
       {
         path: "/",
         element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <AboutClass name={"shweta"} />,
       },
     ],
   },
