@@ -1,6 +1,6 @@
 .body {
   position: relative;
-  top: 6rem;
+  top: 100px;
   min-height: calc(100vh - 368px);
   overflow-x: hidden;
   overflow-y: auto;
@@ -18,21 +18,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    border-top: 1px solid black;
     padding-top: 20px;
   }
 
-  .filters {
-    display: flex;
-    justify-content: space-between;
-    height: 72px;
-    position: relative;
-    padding: 10px;
 
-    button,
-    input {
-      padding: 10px;
-    }
-
-  }
 }

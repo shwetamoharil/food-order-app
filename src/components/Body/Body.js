@@ -30,49 +30,6 @@ const Body = () => {
     <ShimmerUI />
   ) : (
     <div className="body">
-      <div className="filters">
-        <div className="top-rated">
-          <button
-            onClick={() => {
-              const filteredList = allRestraurants.filter(
-                (res) => res.data?.avgRating > 4
-              );
-              setFilteredRestraurants(filteredList);
-            }}
-          >
-            Top Rated Restraurants
-          </button>
-          <button
-            onClick={() => {
-              setFilteredRestraurants(allRestraurants);
-            }}
-          >
-            Cancel
-          </button>
-        </div>
-        <div className="search">
-          <input
-            type="text"
-            value={searchInput}
-            onChange={(e) => {
-              setSearchInput(e.target.value);
-            }}
-          ></input>
-          <button
-            onClick={() => {
-              const filterList = allRestraurants.filter((res) =>
-                res?.data?.name
-                  .toLowerCase()
-                  .includes(searchInput.toLowerCase())
-              );
-              setFilteredRestraurants(filterList);
-            }}
-          >
-            Search
-          </button>
-        </div>
-      </div>
-
       <div className="restraurant-container">
         {filteredRestraurants.map((res) => (
           <Card

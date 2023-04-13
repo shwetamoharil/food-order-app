@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
-import { LOGO_URL } from "../../utils/constants";
 import "./Header.scss";
 
 const Header = () => {
@@ -17,15 +16,13 @@ const Header = () => {
       </div>
       <div className="header__items">
         <ul>
-          <li>
-            <Link to="/search">Search</Link>
-          </li>
-          <li>Home</li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>Profile</li>
-          <li>Cart</li>
+          <NavLink to="/search">
+            <li>Search</li>
+          </NavLink>
+
+          <NavLink to="/">
+            <li>Home</li>
+          </NavLink>
         </ul>
       </div>
     </div>
