@@ -74,7 +74,7 @@ const Search = () => {
         </div>
         <div className="search-container__search__icon">
           {searchText.length !== 0 ? (
-            <AiOutlineClose size="1.5em" onClick={() => setSearchText("")} />
+            <AiOutlineClose size="1.05em" onClick={() => setSearchText("")} />
           ) : (
             <AiOutlineSearch size="1.5em" />
           )}

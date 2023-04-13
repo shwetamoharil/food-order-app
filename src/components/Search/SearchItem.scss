@@ -2,6 +2,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 5px;
+    cursor: pointer;
 
     &__container {
         display: flex;
@@ -9,6 +11,12 @@
         background-color: #fff;
         border: none;
         align-items: center;
+        padding: 2px;
+
+
+        &__image-container {
+            margin-right: 12px;
+        }
 
         img {
             width: 64px;
@@ -20,6 +28,29 @@
             flex-direction: column;
             flex: 1;
             align-items: start;
+
+            &__name {
+                font-size: 1rem;
+                margin-bottom: 1px;
+                color: #282c3f;
+                font-family: sans-serif;
+                // #7e808c;
+            }
+
+            &__detail {
+                font-size: 0.8rem;
+                color: #7e808c;
+                ;
+            }
         }
+    }
+}
+
+.search-item-list:hover {
+    cursor: pointer;
+
+    button:hover {
+        background: #f2f6fc;
+        cursor: pointer;
     }
 }

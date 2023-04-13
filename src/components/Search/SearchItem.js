@@ -12,7 +12,7 @@ const SearchItem = ({ type, cloudinaryId, text }) => {
             <span>{text}</span>
           </div>
           <div className="search-item-list__container__name-container__detail">
-            {type}
+            {type.charAt(0).toUpperCase() + type.slice(1).toLowerCase()}
           </div>
         </div>
       </button>
